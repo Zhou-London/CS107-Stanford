@@ -41,6 +41,13 @@ void pig_regular(char* str, char* res){
   strcat(res, "ay");
 }
 
+void pig_list(char** strs){
+  char* item = pig_latin(strs[0]);
+  if(item == NULL){
+    item = strdup(strs[0]);
+  }
+  
+
 int main(){
   char* test = pig_latin("banana");
   printf("%s\n", test);
